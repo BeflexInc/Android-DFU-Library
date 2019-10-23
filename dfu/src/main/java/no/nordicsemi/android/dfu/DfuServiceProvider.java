@@ -24,8 +24,8 @@ package no.nordicsemi.android.dfu;
 
 import android.bluetooth.BluetoothGatt;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 
-import androidx.annotation.NonNull;
 import no.nordicsemi.android.dfu.internal.exception.DeviceDisconnectedException;
 import no.nordicsemi.android.dfu.internal.exception.DfuException;
 import no.nordicsemi.android.dfu.internal.exception.UploadAbortedException;

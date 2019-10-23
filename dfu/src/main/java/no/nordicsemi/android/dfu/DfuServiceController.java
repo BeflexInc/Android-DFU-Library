@@ -24,9 +24,8 @@ package no.nordicsemi.android.dfu;
 
 import android.content.Context;
 import android.content.Intent;
-
-import androidx.annotation.NonNull;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import android.support.annotation.NonNull;
+import android.support.v4.content.LocalBroadcastManager;
 
 /**
  * A controller class allows you to pause, resume or abort the DFU operation in a easy way.

@@ -22,6 +22,7 @@
 
 package no.nordicsemi.android.dfu.internal;
 
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.google.gson.Gson;
@@ -37,7 +38,6 @@ import java.util.zip.CRC32;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import androidx.annotation.NonNull;
 import no.nordicsemi.android.dfu.DfuBaseService;
 import no.nordicsemi.android.dfu.internal.manifest.FileInfo;
 import no.nordicsemi.android.dfu.internal.manifest.Manifest;

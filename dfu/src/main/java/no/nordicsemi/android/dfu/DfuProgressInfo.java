@@ -23,7 +23,7 @@
 package no.nordicsemi.android.dfu;
 
 import android.os.SystemClock;
-import androidx.annotation.NonNull;
+import android.support.annotation.NonNull;
 
 /* package */ class DfuProgressInfo {
 	interface ProgressListener {

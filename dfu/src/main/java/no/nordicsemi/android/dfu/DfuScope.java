@@ -1,6 +1,9 @@
 package no.nordicsemi.android.dfu;
 
-import androidx.annotation.IntDef;
+import android.support.annotation.IntDef;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 @SuppressWarnings("WeakerAccess")
 @IntDef(value = {
@@ -8,4 +11,4 @@ import androidx.annotation.IntDef;
             DfuServiceInitiator.SCOPE_APPLICATION
         },
         flag = true)
-public @interface DfuScope {}
+public @Retention(RetentionPolicy.SOURCE) @interface DfuScope {}

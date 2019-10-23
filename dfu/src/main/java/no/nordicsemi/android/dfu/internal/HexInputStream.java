@@ -22,7 +22,7 @@
 
 package no.nordicsemi.android.dfu.internal;
 
-import androidx.annotation.NonNull;
+import android.support.annotation.NonNull;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;

@@ -22,7 +22,7 @@
 
 package no.nordicsemi.android.dfu;
 
-import androidx.annotation.NonNull;
+import android.support.annotation.NonNull;
 
 /**
  * Listener for status, progress and error events. This listener should be used instead of

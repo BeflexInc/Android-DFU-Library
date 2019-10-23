@@ -29,16 +29,16 @@ import android.bluetooth.BluetoothGattDescriptor;
 import android.bluetooth.BluetoothGattService;
 import android.content.Intent;
 import android.os.Build;
+import android.support.annotation.IntRange;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.util.Log;
 
 import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.util.UUID;
 
-import androidx.annotation.IntRange;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import no.nordicsemi.android.dfu.internal.ArchiveInputStream;
 import no.nordicsemi.android.dfu.internal.exception.DeviceDisconnectedException;
 import no.nordicsemi.android.dfu.internal.exception.DfuException;
@@ -290,9 +290,9 @@ import no.nordicsemi.android.dfu.internal.scanner.BootloaderScannerFactory;
 
 	@Override
 	public boolean initialize(@NonNull final Intent intent, @NonNull final BluetoothGatt gatt,
-                              final int fileType,
-                              @NonNull final InputStream firmwareStream,
-                              @Nullable final InputStream initPacketStream)
+							  final int fileType,
+							  @NonNull final InputStream firmwareStream,
+							  @Nullable final InputStream initPacketStream)
             throws DfuException, DeviceDisconnectedException, UploadAbortedException {
 		mGatt = gatt;
 		mFileType = fileType;
