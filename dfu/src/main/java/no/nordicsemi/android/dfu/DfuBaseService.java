@@ -877,8 +877,15 @@ public abstract class DfuBaseService extends IntentService implements DfuProgres
 					 *  NOTE: We are doing this to avoid the hack with calling the hidden gatt.refresh() method, at least for bonded devices.
 					 */
 					if (gatt.getDevice().getBondState() == BluetoothDevice.BOND_BONDED) {
-						logi("Waiting 1600 ms for a possible Service Changed indication...");
-						waitFor(1600);
+						logi("Remove bond before starting DFU");
+						try {
+							Method m = gatt.getDevice().getClass()
+									.getMethod("removeBond", (Class[]) null);
+							m.invoke(gatt.getDevice(), (Object[]) null);
+						} catch (Exception e) {
+							Log.e(TAG, e.getMessage());
+						}
+						return;
 						// After 1.6s the services are already discovered so the following gatt.discoverServices() finishes almost immediately.
 
 						// NOTE: This also works with shorted waiting time. The gatt.discoverServices() must be called after the indication is received which is
